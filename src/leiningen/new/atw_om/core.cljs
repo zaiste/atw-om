@@ -37,7 +37,7 @@
                 (go (while true
                       (let [widgets (<! (fetch-widgets (:url opts)))]
                         (.log js/console (pr-str widgets))
-                        (om/update! app #(assoc % :widgets widgets)))
+                        (om/update! app [:widgets] widgets))
                       (<! (timeout (:poll-interval opts))))))
     om/IRender
     (render [_]
@@ -54,4 +54,6 @@
                                {:opts {:url "/widgets"
                                        :poll-interval 2000}})))))
 
-(om/root app-state om-app (.getElementById js/document "content"))
+(om/root om-app app-state
+         {:target (. js/document (getElementById "content"))})
+
