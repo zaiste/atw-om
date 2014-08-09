@@ -29,11 +29,11 @@
 
 (defn widget-box [app owner opts]
   (reify
-    om/IInitState
-    (init-state [_]
-                (om/transact! app [:widgets] (fn [] [])))
     om/IWillMount
     (will-mount [_]
+                ;; Initialize :widgets to []
+                (om/transact! app [:widgets] (fn [] []))
+                ;; Every opts{:poll-interval} milliseconds get :widgets from server
                 (go (while true
                       (let [widgets (<! (fetch-widgets (:url opts)))]
                         (.log js/console (pr-str widgets))
