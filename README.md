@@ -1,6 +1,6 @@
 # atw-om
 
-A web application template with Clojure/Compojure on the backend, ClojureScript/Om on the frontend and core.async in-between: simply put, Clojure **a**ll **t**he **w**ay.
+A web application template with Clojure/Compojure on the backend, ClojureScript/Om on the frontend and core.async in-between: simply put, Clojure All The Way.
 
 ## Usage
 
