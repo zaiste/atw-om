@@ -6,10 +6,10 @@
                  [ring/ring-core "1.2.0"]
                  [ring/ring-json "0.2.0"]
                  [compojure "1.1.6"]
-                 [org.clojure/clojurescript "0.0-2307"]
-                 [org.clojure/core.async "0.1.319.0-6b1aca-alpha"]
+                 [org.clojure/clojurescript "0.0-2371"]
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
                  [cljs-http "0.1.9"]
-                 [om "0.7.1"]]
+                 [om "0.7.3"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]
             [lein-ring "0.8.11"]
