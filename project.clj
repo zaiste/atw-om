@@ -1,4 +1,4 @@
-(defproject atw-om/lein-template "0.3.0"
+(defproject atw-om/lein-template "0.3.1"
   :description "Clojure, all the way with Om"
   :url "https://github.com/zaiste/atw-om"
   :license {:name "Eclipse Public License"
